@@ -1,0 +1,22 @@
+
+git config --global core.editor vim
+git clone -b mstar ssh://public@tc001/home/public/kodi kodi
+
+git status
+git diff
+git add .
+git commit
+git push ssh://public@tc001/home/public/kodi
+
+   # cd kodi/tools/depends
+   # ./bootstrap
+   # ./configure --help
+
+./configure --with-toolchain=/opt/android-14 --prefix=/tmp/kodi --with-sdk-path=/opt/android-sdk-linux --with-ndk=/opt/android-ndk-r9 --with-sdk=android-14 --host=arm-linux-androideabi --with-tarballs=/tmp/xbmc-tar
+   #make -j 4
+
+   # cd kodi
+   # make -C tools/depends/target/xbmc
+   # make
+   # make apk
+
